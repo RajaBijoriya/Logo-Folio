@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { Button } from "@mantine/core";
-
 
 const Navbar = () => {
   return (
@@ -11,7 +9,7 @@ const Navbar = () => {
         <Link to="/">
           <img
             src="./logo.png"
-            className="w-[40px] ml-10 h-[35px]"
+            className="w-[40px] ml-10 h-[35px] rounded-full"
             alt="logo"
           />
         </Link>
@@ -21,35 +19,35 @@ const Navbar = () => {
           <ul className="flex flex-row gap-10">
             <li>
               <Link
-                className=" transition-colors duration-500 hover:text-[#FF520E]"
+                className="transition-colors duration-500 hover:text-[#FF520E]"
                 to="/process">
                 Process
               </Link>
             </li>
             <li>
               <Link
-                className=" transition-colors duration-500 hover:text-[#FF520E]"
+                className="transition-colors duration-500 hover:text-[#FF520E]"
                 to="/work">
                 Work
               </Link>
             </li>
             <li>
               <Link
-                className=" transition-colors duration-500 hover:text-[#FF520E]"
+                className="transition-colors duration-500 hover:text-[#FF520E]"
                 to="/services">
                 Services
               </Link>
             </li>
             <li>
               <Link
-                className=" transition-colors duration-500 hover:text-[#FF520E]"
+                className="transition-colors duration-500 hover:text-[#FF520E]"
                 to="/about">
                 About
               </Link>
             </li>
             <li>
               <Link
-                className=" transition-colors duration-500 hover:text-[#FF520E]"
+                className="transition-colors duration-500 hover:text-[#FF520E]"
                 to="/faqs">
                 FAQs
               </Link>

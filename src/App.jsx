@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import "@mantine/core/styles.css";
 
 import { Button, MantineProvider } from "@mantine/core";
@@ -13,9 +13,7 @@ import About from "./components/About";
 import Faqs from "./components/Faqs";
 import CustomCursor from "./components/CustomCursor"
 import Companies from "./components/Companies";
-
-
-
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,7 +21,7 @@ function App() {
       <BrowserRouter>
         <div className="bg-black text-white">
           <CustomCursor />
-          
+
           <div
             style={{
               background:
@@ -31,10 +29,15 @@ function App() {
             }}>
             <Navbar />
             <Hero />
-            <Companies/>
+            <Companies />
           </div>
           <Process />
           <Work />
+          <Services />
+          <About />
+          <Faqs />
+          <Footer />
+
           <Button
             className="left-245 bottom-1 fixed !rounded-2xl "
             style={{
@@ -45,7 +48,7 @@ function App() {
               zIndex: 9999,
               boxShadow: "0 8px 15px rgba(0, 0, 0, 0.4)",
               backgroundColor: "rgba(0, 0, 0, 1)",
-              color: "white",
+              color: "rgba(255, 255, 255, 1)",
               root: {
                 backgroundColor: "#F1F1F1",
                 "&:hover": {
@@ -78,22 +81,12 @@ function App() {
           </Button>
 
           <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/hero" element={<Hero />} />
             <Route path="/process" element={<Process />} />
             <Route path="/work" element={<Work />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/faqs" element={<Faqs />} />
           </Routes>
-          {/* <Routes>
-            <Route path="/hero" element={<Hero />} />
-            <Route path="/process" element={<Process />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/faqs" element={<Faqs />} />
-          </Routes> */}
         </div>
       </BrowserRouter>
     </MantineProvider>
